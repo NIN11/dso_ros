@@ -75,7 +75,7 @@ void ROSOutputWrapper::publishCamPose(dso::FrameShell* frame,
                              tf_odom_base);
 
   } catch (...) {
-    ROS_ERROR_STREAM("DSO_ROS: Not sucessfull in retrieving tf tranform from"
+    ROS_ERROR_STREAM("DSO_ROS: Not sucessfull in retrieving tf tranform from "
                      << odom_frame_id_ << "->" << base_frame_id_);
     return;
   }
@@ -85,7 +85,7 @@ void ROSOutputWrapper::publishCamPose(dso::FrameShell* frame,
     tf_list_.lookupTransform(base_frame_id_, camera_frame_id_, timestamp_,
                              tf_base_cam);
   } catch (...) {
-    ROS_ERROR_STREAM("DSO_ROS: Not sucessfull in retrieving tf tranform from"
+    ROS_ERROR_STREAM("DSO_ROS: Not sucessfull in retrieving tf tranform from "
                      << base_frame_id_ << "->" << camera_frame_id_);
     return;
   }

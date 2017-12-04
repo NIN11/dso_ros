@@ -35,7 +35,7 @@ catkin_package(
 ###########
 
 set(CMAKE_CXX_FLAGS
-  "${SSE_FLAGS} -O2 -g -std=c++0x -fno-omit-frame-pointer"
+  "${SSE_FLAGS} -O2 -g -std=c++0x -fno-omit-frame-pointer -march=native"
 )
 
 set(ros_IOWrapper_source
